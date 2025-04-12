@@ -26,7 +26,59 @@ def rail_fence_encode(string, key):
     post: returns a single string that is encoded with
         rail fence algorithm
     """
+    encoding_list = []
+    for _ in range(len(k)):
+        encoding_list.append([])
+    for i in range(len(encoding_list)):
+        for j in range(len(string)):
+            encoding_list[i][j].append('-')
     
+    for k in range(len(string)):
+        while i in range(len(encoding_list)):
+            encoding_list[i][k] = string[k]
+            i = i + 1
+        i = i - 1
+        
+
+        i = i + 1
+
+
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    for i in range(len(grid)):
+        if i == 0:
+            for j in range(len(grid[0])):
+                iterative_i = 0
+                iterative_j = j
+                while iterative_i < len(grid) and 0 <= iterative_j < len(grid[0]):
+                    second_diagonal_list.append((iterative_i, iterative_j))
+                    iterative_i += 1
+                    iterative_j -= 1
+        else:
+            new_i = i
+            new_j = len(grid[0]) - 1
+            while new_i < len(grid) and 0 <= new_j < len(grid[0]):
+                second_diagonal_list.append((new_i, new_j))
+                new_i += 1
+                new_j -= 1
+
+    return second_diagonal_list
+
+    
+
+
     
 
 
